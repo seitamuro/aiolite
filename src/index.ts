@@ -1,6 +1,7 @@
 import { Game, Types } from "phaser"
 import { Level1, LoadingScene } from "@/scenes"
 import { UIScene } from "./scenes/ui";
+import { Stage } from "./scenes/stage";
 
 declare global {
     interface Window { game: Game; sizeChanged: () => void; initializeGame: (config: GameConfigExtended) => Game; gameConfig: GameConfigExtended; }
@@ -40,7 +41,7 @@ export const gameConfig: GameConfigExtended = {
     audio: {
         disableWebAudio: false,
     },
-    scene: [LoadingScene, Level1, UIScene],
+    scene: [LoadingScene, Level1, UIScene, Stage],
     winScore: 40,
 }
 
