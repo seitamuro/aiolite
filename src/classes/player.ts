@@ -60,6 +60,12 @@ export class Player extends Actor {
       }),
       frameRate: 8,
     })
+
+    // Click Handler
+    this.scene.input.on("pointerdown", (pointer) => {
+      console.log(`Click: ${pointer.x}, ${pointer.y}`);
+      this.setPosition(pointer.x, pointer.y);
+    });
   }
 
   update(): void {
