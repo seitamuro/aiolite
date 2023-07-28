@@ -21,6 +21,8 @@ export class Player extends Actor {
     this.getBody().setSize(30, 30);
     this.getBody().setOffset(8, 0);
 
+    this.setGravityY(100);
+
     this.initAnimations();
 
     this.hpValue = new Text(this.scene, this.x, this.y - this.height, this.hp.toString())
@@ -63,7 +65,7 @@ export class Player extends Actor {
   update(): void {
 
     // Moving
-    this.getBody().setVelocity(0);
+    //this.getBody().setVelocity(0);
     if (this.keyW.isDown) { // Up
       this.body!.velocity.y = -110;
       !this.anims.isPlaying && this.play("run", true);
