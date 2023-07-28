@@ -18,5 +18,6 @@ export class Block extends Phaser.GameObjects.Rectangle {
   constructor(scene: Phaser.Scene, x: number, y: number, width: number, height: number, color: Phaser.Display.Color) {
     super(scene, x, y, width, height, color.color);
     scene.add.existing(this);
+    scene.physics.add.staticGroup(this);
   }
 }

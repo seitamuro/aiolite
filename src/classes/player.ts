@@ -11,7 +11,7 @@ export class Player extends Actor {
   private hpValue: Text;
 
   constructor(scene: Phaser.Scene, x: number, y: number) {
-    super(scene, x, y, "king");
+    super(scene, x, y, "hana");
 
     this.keyW = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.W);
     this.keyA = this.scene.input.keyboard!.addKey(Phaser.Input.Keyboard.KeyCodes.A);
